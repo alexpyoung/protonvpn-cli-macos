@@ -12,10 +12,6 @@ Killswitch functionality is not available for MacOS because it uses `iptables` a
 
 For more detailed information on installing, updating and uninstalling, please view the extensive [usage guide](https://github.com/ProtonVPN/linux-cli/blob/master/USAGE.md#installation--updating).
 
-### Installing from distribution repositories
-
-For the following Linux distribution(s), install the official `protonvpn-cli` package:
-
 #### Installing Dependencies
 
 **Dependencies:**
