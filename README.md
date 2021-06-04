@@ -26,7 +26,7 @@ Depending on your distribution, run the appropriate following command to install
 
 | **Distro**                              | **Command**                                                        |
 |:----------------------------------------|:------------------------------------------------                   |
-|MacOS                       | `brew install -y  openvpn dialog python3`       |
+|MacOS                       | `brew install openvpn dialog python3`       |
 
 
 ### Manual Installation from source
