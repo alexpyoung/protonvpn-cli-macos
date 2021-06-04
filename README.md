@@ -16,6 +16,7 @@ For more detailed information on installing, updating and uninstalling, please v
 
 **Dependencies:**
 
+- homebrew
 - openvpn
 - dialog (optional, needed for interactive selection)
 - pip for python3 (pip3)
