@@ -45,8 +45,10 @@ It is recommended to do the manual installation in a virtual environment. Especi
 
 3. Install
 
-    `pip3 install -r requirements.txt`
-    `sudo python3 setup.py install`
+    ```
+    pip3 install -r requirements.txt
+    sudo python3 setup.py install
+    ```
 
 For updating, you just need to pull the latest version of the repository with git.
 
