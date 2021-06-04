@@ -1,4 +1,4 @@
-<h1 align="center">ProtonVPN-CLI</h1>
+<h1 align="center">ProtonVPN-CLI for MacOS</h1>
 <p align="center">
   <img src="resources/images/linux-cli-banner.png" alt="Logo"></img>
 </p>
@@ -12,15 +12,10 @@
     <a href="https://www.reddit.com/r/ProtonVPN"><img alt="Subreddit subscribers" src="https://img.shields.io/reddit/subreddit-subscribers/ProtonVPN?label=Join%20r%2FProtonVPN&style=social"></a>
 </p>
 
-<h3 align="center">A Linux CLI for ProtonVPN. Written in Python.</h3>
-
-ProtonVPN-CLI is a full rewrite of the [bash protonvpn-cli](https://github.com/ProtonVPN/protonvpn-cli/blob/master/protonvpn-cli.sh) in Python, which adds more features and functionality with the purpose of improving readability, speed and reliability.
-
+<h3 align="center">An [unofficial] MacOS CLI for ProtonVPN. Written in Python.</h3>
 
 ## Important information
-The [official ProtonVPN Linux beta](https://protonvpn.com/blog/linux-vpn-cli-beta) app is available for most Linux Debian-based distros and Fedora 33 
-(support for more distros to follow). Where possible, we recommend that you [upgrade to the official app](https://protonvpn.com/support/official-linux-client/).
-The community Linux client described below remains available for those who need it.
+Killswitch functionality is not available for MacOS because it uses `iptables` and such.  This repo simply includes a slight rewrite of the `utils.py` script that will grab the default interface via `netstat` instead of requiring `iproute2` as a dependency.
 
 ## Installation & Updating
 
@@ -29,32 +24,6 @@ For more detailed information on installing, updating and uninstalling, please v
 ### Installing from distribution repositories
 
 For the following Linux distribution(s), install the official `protonvpn-cli` package:
-
-#### Fedora
-
-```sh
-sudo dnf install -y protonvpn-cli
-```
-
-#### CentOS & RHEL
-
-`protonvpn-cli` is available for CentOS/RHEL 7.x and 8.x via the [EPEL repositories](https://fedoraproject.org/wiki/EPEL).
-
-**For CentOS/RHEL 7.x**:
-
-```sh
-sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-sudo yum install protonvpn-cli
-```
-
-**For CentOS/RHEL 8.x**:
-
-```sh
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-sudo dnf install -y protonvpn-cli
-```
-
-### Installing from PyPI
 
 #### Installing Dependencies
 
@@ -70,22 +39,8 @@ Depending on your distribution, run the appropriate following command to install
 
 | **Distro**                              | **Command**                                                        |
 |:----------------------------------------|:------------------------------------------------                   |
-|Fedora/CentOS/RHEL                       | `sudo dnf install -y openvpn dialog python3-pip python3-setuptools`|
-|Ubuntu/Linux Mint/Debian and derivatives | `sudo apt install -y openvpn dialog python3-pip python3-setuptools`|
-|OpenSUSE/SLES                            | `sudo zypper in -y openvpn dialog python3-pip python3-setuptools`  |
-|Arch Linux/Manjaro                       | `sudo pacman -S openvpn dialog python-pip python-setuptools`       |
+|MacOS                       | `brew install -y  openvpn dialog python3`       |
 
-#### Installing ProtonVPN-CLI
-
-Installation happens via Python's package manager PIP.
-
-*Note: Make sure to run pip with sudo, so it installs globally and recognizes the command with sudo*
-
-`sudo pip3 install protonvpn-cli`
-
-#### Updating ProtonVPN-CLI
-
-`sudo pip3 install protonvpn-cli --upgrade`
 
 ### Manual Installation from source
 
@@ -95,15 +50,16 @@ It is recommended to do the manual installation in a virtual environment. Especi
 
 1. Clone this repository
 
-    `git clone https://github.com/protonvpn/linux-cli`
+    `git clone https://github.com/phx/protonvpn-cli-macos`
 
 2. Step into the directory
 
-   `cd linux-cli`
+   `cd protonvpn-cli-macos`
 
 3. Install
 
-    `pip3 install -e .`
+    `pip3 install -r requirements.txt`
+    `sudo python3 setup.py install`
 
 For updating, you just need to pull the latest version of the repository with git.
 
@@ -131,7 +87,3 @@ For updating, you just need to pull the latest version of the repository with gi
 |`protonvpn --help`                 | Show help message.                                    |
 
 All connect options can be used with the `-p` flag to explicitly specify which transmission protocol is used for that connection (either `udp` or `tcp`).
-
-## Contributing
-
-If you want to contribute to this project, please read the [contribution guide](https://github.com/ProtonVPN/linux-cli/blob/master/CONTRIBUTING.md).

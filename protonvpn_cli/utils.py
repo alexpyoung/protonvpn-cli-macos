@@ -177,11 +177,11 @@ def get_fastest_server(server_pool):
 def get_default_nic():
     """Find and return the default network interface"""
     default_route = subprocess.run(
-        "ip route show | grep default",
+        "netstat -an | grep default | awk '{print $NF}'",
         stdout=subprocess.PIPE, shell=True
     )
 
-    # Get the default nic from ip route show output
+    # Get the default nic from netstat output
     default_nic = default_route.stdout.decode().strip().split()[4]
     return default_nic
 
@@ -336,7 +336,7 @@ def check_root():
         sys.exit(1)
     else:
         # Check for dependencies
-        dependencies = ["openvpn", "ip", "sysctl", "pgrep", "pkill"]
+        dependencies = ["openvpn", "netstat", "sysctl", "pgrep", "pkill"]
         for program in dependencies:
             check = subprocess.run(["which", program],
                                    stdout=subprocess.PIPE,
