@@ -3,15 +3,6 @@
   <img src="resources/images/linux-cli-banner.png" alt="Logo"></img>
 </p>
 
-<p align="center">
-    <a href="https://pepy.tech/project/protonvpn-cli"><img alt="Downloads" src="https://pepy.tech/badge/protonvpn-cli"></a>
-    <img alt="GitHub" src="https://img.shields.io/github/license/ProtonVPN/linux-cli">
-    <a href="https://pepy.tech/project/protonvpn-cli/week"><img alt="Downloads per Week" src="https://pepy.tech/badge/protonvpn-cli/week"></a>
-    <br>
-    <a href="https://twitter.com/ProtonVPN"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/ProtonVPN?style=social"></a>
-    <a href="https://www.reddit.com/r/ProtonVPN"><img alt="Subreddit subscribers" src="https://img.shields.io/reddit/subreddit-subscribers/ProtonVPN?label=Join%20r%2FProtonVPN&style=social"></a>
-</p>
-
 <h3 align="center">An [unofficial] MacOS CLI for ProtonVPN. Written in Python.</h3>
 
 ## Important information
