@@ -30,10 +30,6 @@ Depending on your distribution, run the appropriate following command to install
 
 ### Manual Installation from source
 
-*Disclaimer: If you are unsure about what you're doing, please follow the [normal installation guide](https://github.com/ProtonVPN/linux-cli/blob/master/USAGE.md#installation--updating).*
-
-It is recommended to do the manual installation in a virtual environment. Especially if it serves the purpose of developing.
-
 1. Clone this repository
 
     `git clone https://github.com/phx/protonvpn-cli-macos`
